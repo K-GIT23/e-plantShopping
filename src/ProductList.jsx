@@ -11,29 +11,29 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "Snake Plant",
-                    image: src="https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
+                    image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
                     description: "Produces oxygen at night, improving air quality.",
                     cost: "$15"
                 },
                 {
                     name: "Spider Plant",
-                    image: src="https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",                     description: "Filters formaldehyde and xylene from the air.",
+                    image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",                     description: "Filters formaldehyde and xylene from the air.",
                     cost: "$12"
                 },
                 {
                     name: "Peace Lily",
-                    image: src="https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lilies-4269365_1280.jpg",                     description: "Removes mold spores and purifies the air.",
+                    image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lilies-4269365_1280.jpg",                     description: "Removes mold spores and purifies the air.",
                     cost: "$18"
                 },
                 {
                     name: "Rubber Plant",
-                    image: src="https://cdn.pixabay.com/photo/2021/02/03/06/22/rubber-tree-5976841_1280.jpg", 
+                    image: "https://cdn.pixabay.com/photo/2021/02/03/06/22/rubber-tree-5976841_1280.jpg", 
                     description: "Easy to care for and effective at removing toxins.",
                     cost: "$16"
                 },
                 {
                     name: "Aloe Vera",
-                    image: src="https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",                     description: "Purifies the air and has healing properties for skin.",
+                    image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",                     description: "Purifies the air and has healing properties for skin.",
                     cost: "$12"
                 }
             ]
@@ -43,24 +43,24 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "Jasmine",
-                    image: src="https://cdn.pixabay.com/photo/2022/06/10/16/23/thailand-jasmine-7254857_1280.jpg", 
+                    image: "https://cdn.pixabay.com/photo/2022/06/10/16/23/thailand-jasmine-7254857_1280.jpg", 
                     description: "Sweet fragrance, promotes relaxation.",
                     cost: "$14"
                 },
                 {
                     name: "Rosemary",
-                    image: src="https://cdn.pixabay.com/photo/2019/10/11/07/12/rosemary-4541241_1280.jpg", 
+                    image: "https://cdn.pixabay.com/photo/2019/10/11/07/12/rosemary-4541241_1280.jpg", 
                     description: "Invigorating scent, often used in cooking.",
                     cost: "$12"
                 },
                 {
                     name: "Mint",
-                    image: src="https://cdn.pixabay.com/photo/2016/01/07/18/16/mint-1126282_1280.jpg",                     description: "Refreshing aroma, used in teas and cooking.",
+                    image: "https://cdn.pixabay.com/photo/2016/01/07/18/16/mint-1126282_1280.jpg",                     description: "Refreshing aroma, used in teas and cooking.",
                     cost: "$10"
                 },
                 {
                     name: "Cyclamen",
-                    image: src="https://cdn.pixabay.com/photo/2015/11/28/13/40/flowers-1067271_1280.jpg",                     description: "Abundant blooms, occasional water and indirect light; very easy!",
+                    image: "https://cdn.pixabay.com/photo/2015/11/28/13/40/flowers-1067271_1280.jpg",                     description: "Abundant blooms, occasional water and indirect light; very easy!",
                     cost: "$12"
                 }
             
@@ -71,18 +71,18 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "Mango",
-                    image: src="https://cdn.pixabay.com/photo/2014/04/21/22/13/mango-329436_1280.jpg",                     description: "Sweet fragrance, good source of Vitamin A, C, and potassium.",
+                    image: "https://cdn.pixabay.com/photo/2014/04/21/22/13/mango-329436_1280.jpg",                     description: "Sweet fragrance, good source of Vitamin A, C, and potassium.",
                     cost: "$12"
                 },
                 {
                     name: "Tomatoes (variety)",
-                    image: src="https://cdn.pixabay.com/photo/2016/12/08/19/07/vegetables-1892900_1280.jpg",
+                    image: "https://cdn.pixabay.com/photo/2016/12/08/19/07/vegetables-1892900_1280.jpg",
                     description: "Universal and delicious with so much.",
                     cost: "$12"
                 },
                 {
                     name: "Avocado",
-                    image: src="https://cdn.pixabay.com/photo/2015/08/10/12/01/avocado-882634_1280.jpg",                     description: "If you know, you know.",
+                    image: "https://cdn.pixabay.com/photo/2015/08/10/12/01/avocado-882634_1280.jpg",                     description: "If you know, you know.",
                     cost: "$10"
                 },
            ]
@@ -92,25 +92,25 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "Variegated Croton", 
-                    image: src="https://cdn.pixabay.com/photo/2021/09/29/07/32/variegated-croton-6666723_1280.jpg",   
+                    image: "https://cdn.pixabay.com/photo/2021/09/29/07/32/variegated-croton-6666723_1280.jpg",   
                     description: "This colorful evergreen shrub makes a good indoor or outdoor plant.",
                     cost: "$12"
                 },
                 {
                     name: "Bromeliad Plant (Red)",
-                    image: src="https://cdn.pixabay.com/photo/2025/06/01/20/35/bromeliad-plant-9635936_1280.jpg",   
+                    image: "https://cdn.pixabay.com/photo/2025/06/01/20/35/bromeliad-plant-9635936_1280.jpg",   
                     description: "Bring this easy to care for tropical oasis to your home or office.",
                     cost: "$18"
                 },
                 {
                     name: "Monstera deliciosa",
-                    image: src="https://cdn.pixabay.com/photo/2023/01/23/04/33/monstera-7737811_1280.jpg", 
+                    image: "https://cdn.pixabay.com/photo/2023/01/23/04/33/monstera-7737811_1280.jpg", 
                     description: "Tropical yet can tolerate low light, less water, low humidity is fine.",
                     cost: "$12"
                 },
                 {
                     name: "Bird of Paradise",
-                    image: src="https://cdn.pixabay.com/photo/2019/10/12/15/31/flower-4544113_1280.jpg",                     description: "Calming scent, used in aromatherapy.",
+                    image: "https://cdn.pixabay.com/photo/2019/10/12/15/31/flower-4544113_1280.jpg",                     description: "Calming scent, used in aromatherapy.",
                     cost: "$20"
                 },                
             ]
@@ -120,24 +120,24 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "Aloe Vera",
-                    image: src="https://cdn.pixabay.com/photo/2013/01/09/13/18/aloe-74451_1280.jpg", 
+                    image: "https://cdn.pixabay.com/photo/2013/01/09/13/18/aloe-74451_1280.jpg", 
                     description: "Soothing gel used for skin ailments.",
                     cost: "$12"
                 },
                 {
                     name: "Peppermint",
-                    image: src="https://cdn.pixabay.com/photo/2020/12/02/16/36/peppermint-5798140_1280.jpg", 
+                    image: "https://cdn.pixabay.com/photo/2020/12/02/16/36/peppermint-5798140_1280.jpg", 
                     description: "Relieves digestive issues and headaches.",
                     cost: "$10"
                 },
                 {
                     name: "Lemon Balm",
-                    image: src="https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg",                     description: "Calms nerves and promotes relaxation.",
+                    image: "https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg",                     description: "Calms nerves and promotes relaxation.",
                     cost: "$12"
                 },
                 {
                     name: "Calendula",
-                    image: src="https://cdn.pixabay.com/photo/2019/07/15/18/28/flowers-4340127_1280.jpg",   
+                    image: "https://cdn.pixabay.com/photo/2019/07/15/18/28/flowers-4340127_1280.jpg",   
                     description: "Heals wounds and soothes skin irritations.",
                     cost: "$12"
                 }
@@ -148,23 +148,23 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "ZZ Plant",
-                    image: src="https://cdn.pixabay.com/photo/2015/10/08/23/59/fortune-spring-978602_1280.jpg",                     description: "Thrives in low light and requires minimal watering (once per month).",
+                    image: "https://cdn.pixabay.com/photo/2015/10/08/23/59/fortune-spring-978602_1280.jpg",                     description: "Thrives in low light and requires minimal watering (once per month).",
                     cost: "$10"
                 },
                 {
                     name: "Clivia (orange)",
-                    image: src="https://cdn.pixabay.com/photo/2017/06/19/00/21/klivie-2417751_1280.jpg",                     description: "enjoy this pop of color that is easy on the eyes and easy to care for.",
+                    image: "https://cdn.pixabay.com/photo/2017/06/19/00/21/klivie-2417751_1280.jpg",                     description: "enjoy this pop of color that is easy on the eyes and easy to care for.",
                     cost: "$15"
                 },
                 {
                     name: "Lemon Lime Prayer Plant",
-                    image: src="http://www.thesill.com/cdn/shop/files/the-sill_Medium-Maranta-Lemon-Lime_Medium_Isabella_Mustard_Variant.jpg", 
+                    image: "http://www.thesill.com/cdn/shop/files/the-sill_Medium-Maranta-Lemon-Lime_Medium_Isabella_Mustard_Variant.jpg", 
                     description: "Gives a vibrant burst of color, and is non-toxic to pets",
                     cost: "$15"
                 },
                 {
                     name: "Aglaonema Red Siam",
-                    image: src="https://cdn.pixabay.com/photo/2014/10/10/04/27/aglaonema-482915_1280.jpg",                     description: "Requires minimal care and adds color to indoor spaces. Great for beginners.",
+                    image: "https://cdn.pixabay.com/photo/2014/10/10/04/27/aglaonema-482915_1280.jpg",                     description: "Requires minimal care and adds color to indoor spaces. Great for beginners.",
                     cost: "$18"
                 }
             ]
