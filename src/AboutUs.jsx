@@ -5,7 +5,7 @@ function AboutUs() {
   return (
     <div className="about-us-container">
       {/* <h1 className="about-us-heading">About Us</h1> */}
-      <p className="about-us-description">Welcome to Pleasant Plantings, where plants bring serenity!</p>
+      <p className="about-us-description">Welcome to Pleasant Plantings!</p>
       <p className="about-us-content">
         At Pleasant Plantings, we are passionate about bringing nature closer to you. Who knew
         that natural elements like plants can promote calmness, contentment, overall well-being, and
@@ -14,7 +14,7 @@ function AboutUs() {
         <p className="about-us-content">
             Humans have a strong natural connection to nature and living plant life. Just having plants
             around us offers psychological and even physical benefits. Plants create a calm, 'healing'
-            space of peace and serenity for reducing stress and anxieties of life. We naturally become
+            space of peace and serenity for reducing stress and anxiety. We naturally become
             calmer, more content, relaxed.
          </p>        
         {/* <p className="plant_logo_left"><img src="https://p1.hiclipart.com/preview/922/979/640/green-leaf-logo-emoji-seedling-emoticon-sticker-plant-plant-stem-flower-png-clipart-thumbnail.jpg" height='50px' width='50px' alt="" /></p> */}
@@ -32,11 +32,7 @@ function AboutUs() {
             Pleasant Shopping!
       </p>
       {/* <p className="plant_logo_right"><img src="https://p1.hiclipart.com/preview/922/979/640/green-leaf-logo-emoji-seedling-emoticon-sticker-plant-plant-stem-flower-png-clipart-thumbnail.jpg" height='50px' width='50px' alt="" /></p> */}
-
-      <p className="about-us-content">
-        Join us in our mission to create a greener, healthier world. Visit Paradise Nursery today and experience the 
-        beauty of nature right at your doorstep.
-      </p>
+      
     </div>
   );
 }
