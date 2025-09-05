@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './ProductList.css'
 import CartItem from './CartItem';
+import { addItem } from './CartSlice';
+
 function ProductList({ onHomeClick }) {
     const [showCart, setShowCart] = useState(false);
     const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
+    const [addedToCart, setAddedToCart] = useState({});
+
+    const handleAddToCart = (product) => {
+        dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
+      
+        setAddedToCart((prevState) => ({ // Update the local state to reflect that the product has been added
+          ...prevState, // Spread the previous state to retain existing entries
+          [product.name]: true, // Set the current product's name as a key with value 'true' to mark it as added
+        }));
+      };
 
     const plantsArray = [
         {
@@ -163,8 +175,8 @@ function ProductList({ onHomeClick }) {
                     cost: "$15"
                 },
                 {
-                    name: "Aglaonema Red Siam",
-                    image: "https://cdn.pixabay.com/photo/2014/10/10/04/27/aglaonema-482915_1280.jpg",                     description: "Requires minimal care and adds color to indoor spaces. Great for beginners.",
+                    name: "Red Aglaonema",
+                    image: "https://cdn.pixabay.com/photo/2023/01/31/00/48/leaves-7756885_1280.jpg",                     description: "Requires minimal care and adds color to indoor spaces. Great for beginners.",
                     cost: "$18"
                 }
             ]
