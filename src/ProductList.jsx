@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './ProductList.css'
 import CartItem from './CartItem';
+import { useDispatch } from 'react-redux';
+import { addItem } from './CartSlice';
+ 
+
+const dispatch = useDispatch();
 
 
 function ProductList({ onHomeClick }) {
@@ -268,6 +273,7 @@ function ProductList({ onHomeClick }) {
             onClick={() => handleAddToCart(plant)} // Handle adding plant to cart
           >
             Add to Cart
+            
           </button>
         </div>
       ))}
