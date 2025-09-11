@@ -32,23 +32,26 @@ function ProductList({ onHomeClick }) {
                 },
                 {
                     name: "Spider Plant",
-                    image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",                     description: "Filters formaldehyde and xylene from the air.",
+                    image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",
+                    description: "Filters formaldehyde and xylene from the air.",
                     cost: "$12"
                 },
                 {
                     name: "Peace Lily",
-                    image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lilies-4269365_1280.jpg",                     description: "Removes mold spores and purifies the air.",
+                    image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lilies-4269365_1280.jpg",
+                    description: "Removes mold spores and purifies the air.",
                     cost: "$18"
                 },
                 {
                     name: "Rubber Plant",
-                    image: "https://cdn.pixabay.com/photo/2021/02/03/06/22/rubber-tree-5976841_1280.jpg", 
+                    image: "https://cdn.pixabay.com/photo/2021/02/03/06/22/rubber-tree-5976841_1280.jpg",
                     description: "Easy to care for and effective at removing toxins.",
                     cost: "$16"
                 },
                 {
                     name: "Aloe Vera",
-                    image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",                     description: "Purifies the air and has healing properties for skin.",
+                    image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",                    
+                    description: "Purifies the air and has healing, soothing gel for the skin.",
                     cost: "$12"
                 }
             ]
@@ -70,12 +73,14 @@ function ProductList({ onHomeClick }) {
                 },
                 {
                     name: "Mint",
-                    image: "https://cdn.pixabay.com/photo/2016/01/07/18/16/mint-1126282_1280.jpg",                     description: "Refreshing aroma, used in teas and cooking.",
+                    image: "https://cdn.pixabay.com/photo/2016/01/07/18/16/mint-1126282_1280.jpg",
+                    description: "Refreshing aroma, used in teas and cooking.",
                     cost: "$10"
                 },
                 {
                     name: "Cyclamen",
-                    image: "https://cdn.pixabay.com/photo/2015/11/28/13/40/flowers-1067271_1280.jpg",                     description: "Abundant blooms, occasional water and indirect light; very easy!",
+                    image: "https://cdn.pixabay.com/photo/2015/11/28/13/40/flowers-1067271_1280.jpg",
+                    description: "Abundant blooms, occasional water and indirect light; very easy!",
                     cost: "$12"
                 }
             
@@ -86,7 +91,8 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "Mango",
-                    image: "https://cdn.pixabay.com/photo/2014/04/21/22/13/mango-329436_1280.jpg",                     description: "Sweet fragrance, good source of Vitamin A, C, and potassium.",
+                    image: "https://cdn.pixabay.com/photo/2014/04/21/22/13/mango-329436_1280.jpg",
+                    description: "Sweet fragrance, good source of Vitamin A, C, and potassium.",
                     cost: "$12"
                 },
                 {
@@ -97,7 +103,8 @@ function ProductList({ onHomeClick }) {
                 },
                 {
                     name: "Avocado",
-                    image: "https://cdn.pixabay.com/photo/2015/08/10/12/01/avocado-882634_1280.jpg",                     description: "If you know, you know.",
+                    image: "https://cdn.pixabay.com/photo/2015/08/10/12/01/avocado-882634_1280.jpg",
+                    description: "If you know, you know.",
                     cost: "$10"
                 },
            ]
@@ -125,7 +132,8 @@ function ProductList({ onHomeClick }) {
                 },
                 {
                     name: "Bird of Paradise",
-                    image: "https://cdn.pixabay.com/photo/2019/10/12/15/31/flower-4544113_1280.jpg",                     description: "Calming scent, used in aromatherapy.",
+                    image: "https://cdn.pixabay.com/photo/2019/10/12/15/31/flower-4544113_1280.jpg",
+                    description: "Calming scent, used in aromatherapy.",
                     cost: "$20"
                 },                
             ]
@@ -134,10 +142,10 @@ function ProductList({ onHomeClick }) {
             category: "Medicinal Plants",
             plants: [
                 {
-                    name: "Aloe Vera",
-                    image: "https://cdn.pixabay.com/photo/2013/01/09/13/18/aloe-74451_1280.jpg", 
-                    description: "Soothing gel used for skin ailments.",
-                    cost: "$12"
+                    name: "Echinacea",
+                    image: "https://cdn.pixabay.com/photo/2014/12/05/03/53/echinacea-557477_1280.jpg", 
+                    description: "Boosts immune system, helps fight colds.",
+                    cost: "$14"
                 },
                 {
                     name: "Peppermint",
