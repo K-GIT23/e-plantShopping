@@ -5,8 +5,8 @@ export const CartSlice = createSlice({
   name: 'cart',
   initialState: {
     items: [], // Initialize items as an empty array
-    //totalAmount: 0,   /* price for all items */
-    //totalCost: 0,     /* total number of items */
+    totalCost: 0,          /* price for all items */
+    totalQuantity: 0,     /* total number of items */
   },
   reducers: {
     
@@ -28,8 +28,8 @@ export const CartSlice = createSlice({
         const existingItem = state.items.find((item) => item.name === name);
 
        if (existingItem) {
-        existingItem.totalQuantity--;
-        existingItem.totalCost--;
+        state.totalQuantity -= existingItem.quantity;
+        state.totalCost -= existingItem.cost * existingItem.quantity;
       /*  } else {
 
         
@@ -43,10 +43,16 @@ export const CartSlice = createSlice({
     updateQuantity: (state, action) => {
         const { name, quantity } = action.payload; // Assuming you pass the name and new quantity
         const existingItem = state.items.find(item => item.name === name);
+       
         if (existingItem) {  
+            const quantityUpdate = quantity - existingItem.quantity;
+            state.totalQuantity += quantityUpdate;
+            state.totalCost += existingItem.cost * quantityUpdate;
             //adjust the quantity
             existingItem.quantity = quantity; // Update the quantity
-        }
+        } else {
+            console.log(`Item with ID: ${name} not found.`); // Check if the item exists in the cart
+          }
     },
   },
 });
