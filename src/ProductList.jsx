@@ -1,9 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import './ProductList.css'
 import CartItem from './CartItem';
+import { addItem } from './CartSlice';
+
 function ProductList({ onHomeClick }) {
+    const [addedToCart, setAddedToCart] = useState({});
+    const dispatch = useDispatch();
     const [showCart, setShowCart] = useState(false);
     const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
+    
+    const handleAddToCart = (product) => {
+        dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
+      
+        setAddedToCart((prevState) => ({ // Update the local state to reflect that the product has been added
+          ...prevState, // Spread the previous state to retain existing entries
+          [product.name]: true, // Set the current product's name as a key with value 'true' to mark it as added
+        }));
+      };
 
     const plantsArray = [
         {
@@ -17,12 +31,14 @@ function ProductList({ onHomeClick }) {
                 },
                 {
                     name: "Spider Plant",
-                    image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",                     description: "Filters formaldehyde and xylene from the air.",
+                    image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",                     
+                    description: "Filters formaldehyde and xylene from the air.",
                     cost: "$12"
                 },
                 {
                     name: "Peace Lily",
-                    image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lilies-4269365_1280.jpg",                     description: "Removes mold spores and purifies the air.",
+                    image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lilies-4269365_1280.jpg",                     
+                    description: "Removes mold spores and purifies the air.",
                     cost: "$18"
                 },
                 {
@@ -33,7 +49,8 @@ function ProductList({ onHomeClick }) {
                 },
                 {
                     name: "Aloe Vera",
-                    image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",                     description: "Purifies the air and has healing properties for skin.",
+                    image: "https://cdn.pixabay.com/photo/2013/01/09/13/18/aloe-74451_1280.jpg",                     
+                    description: "Purifies the air and has healing properties for skin.",
                     cost: "$12"
                 }
             ]
@@ -55,12 +72,14 @@ function ProductList({ onHomeClick }) {
                 },
                 {
                     name: "Mint",
-                    image: "https://cdn.pixabay.com/photo/2016/01/07/18/16/mint-1126282_1280.jpg",                     description: "Refreshing aroma, used in teas and cooking.",
+                    image: "https://cdn.pixabay.com/photo/2016/01/07/18/16/mint-1126282_1280.jpg",                     
+                    description: "Refreshing aroma, used in teas and cooking.",
                     cost: "$10"
                 },
                 {
                     name: "Cyclamen",
-                    image: "https://cdn.pixabay.com/photo/2015/11/28/13/40/flowers-1067271_1280.jpg",                     description: "Abundant blooms, occasional water and indirect light; very easy!",
+                    image: "https://cdn.pixabay.com/photo/2015/11/28/13/40/flowers-1067271_1280.jpg",                     
+                    description: "Abundant blooms, occasional water and indirect light; very easy!",
                     cost: "$12"
                 }
             
@@ -71,7 +90,8 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "Mango",
-                    image: "https://cdn.pixabay.com/photo/2014/04/21/22/13/mango-329436_1280.jpg",                     description: "Sweet fragrance, good source of Vitamin A, C, and potassium.",
+                    image: "https://cdn.pixabay.com/photo/2014/04/21/22/13/mango-329436_1280.jpg",                     
+                    description: "Sweet fragrance, good source of Vitamin A, C, and potassium.",
                     cost: "$12"
                 },
                 {
@@ -82,7 +102,8 @@ function ProductList({ onHomeClick }) {
                 },
                 {
                     name: "Avocado",
-                    image: "https://cdn.pixabay.com/photo/2015/08/10/12/01/avocado-882634_1280.jpg",                     description: "If you know, you know.",
+                    image: "https://cdn.pixabay.com/photo/2015/08/10/12/01/avocado-882634_1280.jpg",                     
+                    description: "If you know, you know.",
                     cost: "$10"
                 },
            ]
@@ -110,7 +131,8 @@ function ProductList({ onHomeClick }) {
                 },
                 {
                     name: "Bird of Paradise",
-                    image: "https://cdn.pixabay.com/photo/2019/10/12/15/31/flower-4544113_1280.jpg",                     description: "Calming scent, used in aromatherapy.",
+                    image: "https://cdn.pixabay.com/photo/2019/10/12/15/31/flower-4544113_1280.jpg",                     
+                    description: "Calming scent, used in aromatherapy.",
                     cost: "$20"
                 },                
             ]
@@ -119,10 +141,10 @@ function ProductList({ onHomeClick }) {
             category: "Medicinal Plants",
             plants: [
                 {
-                    name: "Aloe Vera",
-                    image: "https://cdn.pixabay.com/photo/2013/01/09/13/18/aloe-74451_1280.jpg", 
-                    description: "Soothing gel used for skin ailments.",
-                    cost: "$12"
+                    name: "Echinacea",
+                    image: "https://cdn.pixabay.com/photo/2014/12/05/03/53/echinacea-557477_1280.jpg", 
+                    description: "Boosts immune system, helps fight colds.",
+                    cost: "$14"
                 },
                 {
                     name: "Peppermint",
@@ -132,7 +154,8 @@ function ProductList({ onHomeClick }) {
                 },
                 {
                     name: "Lemon Balm",
-                    image: "https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg",                     description: "Calms nerves and promotes relaxation.",
+                    image: "https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg",                     
+                    description: "Calms nerves and promotes relaxation.",
                     cost: "$12"
                 },
                 {
@@ -148,23 +171,26 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "ZZ Plant",
-                    image: "https://cdn.pixabay.com/photo/2015/10/08/23/59/fortune-spring-978602_1280.jpg",                     description: "Thrives in low light and requires minimal watering (once per month).",
+                    image: "https://cdn.pixabay.com/photo/2015/10/08/23/59/fortune-spring-978602_1280.jpg",                     
+                    description: "Thrives in low light and requires minimal watering (once per month).",
                     cost: "$10"
                 },
                 {
                     name: "Clivia (orange)",
-                    image: "https://cdn.pixabay.com/photo/2017/06/19/00/21/klivie-2417751_1280.jpg",                     description: "enjoy this pop of color that is easy on the eyes and easy to care for.",
+                    image: "https://cdn.pixabay.com/photo/2017/06/19/00/21/klivie-2417751_1280.jpg",
+                    description: "enjoy this pop of color that is easy on the eyes and easy to care for.",
                     cost: "$15"
                 },
                 {
                     name: "Lemon Lime Prayer Plant",
-                    image: "http://www.thesill.com/cdn/shop/files/the-sill_Medium-Maranta-Lemon-Lime_Medium_Isabella_Mustard_Variant.jpg", 
+                    image: "https://www.thesill.com/cdn/shop/files/the-sill_Medium-Maranta-Lemon-Lime_Medium_Isabella_Mustard_Variant.jpg", 
                     description: "Gives a vibrant burst of color, and is non-toxic to pets",
                     cost: "$15"
                 },
                 {
-                    name: "Aglaonema Red Siam",
-                    image: "https://cdn.pixabay.com/photo/2014/10/10/04/27/aglaonema-482915_1280.jpg",                     description: "Requires minimal care and adds color to indoor spaces. Great for beginners.",
+                    name: "Aglaonema Red Siam Plant",
+                    image: "https://cdn.pixabay.com/photo/2023/01/31/00/48/leaves-7756885_1280.jpg",                     
+                    description: "Requires minimal care and adds color to indoor spaces. Great for beginners.",
                     cost: "$18"
                 }
             ]
@@ -234,7 +260,34 @@ function ProductList({ onHomeClick }) {
             </div>
             {!showCart ? (
                 <div className="product-grid">
-
+                {plantsArray.map((category, index) => ( // Loop through each category in plantsArray
+                <div key={index}> {/* Unique key for each category div */}
+                    <h1>
+                    <div>{category.category}</div> {/* Display the category name */}
+                    </h1>
+                    <div className="product-list"> {/* Container for the list of plant cards */}
+                    {category.plants.map((plant, plantIndex) => ( // Loop through each plant in the current category
+                        <div className="product-card" key={plantIndex}> {/* Unique key for each plant card */}
+                        <img 
+                            className="product-image" 
+                            src={plant.image} // Display the plant image
+                            alt={plant.name} // Alt text for accessibility
+                        />
+                        <div className="product-title">{plant.name}</div> {/* Display plant name */}
+                        {/* Display other plant details like description and cost */}
+                        <div className="product-description">{plant.description}</div> {/* Display plant description */}
+                        <div className="product-cost">${plant.cost}</div> {/* Display plant cost */}
+                        <button
+                            className="product-button"
+                            onClick={() => handleAddToCart(plant)} // Handle adding plant to cart
+                        >
+                            Add to Cart
+                        </button>
+                        </div>
+                    ))}
+                    </div>
+                </div>
+))}
 
                 </div>
             ) : (
