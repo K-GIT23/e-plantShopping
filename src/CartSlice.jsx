@@ -7,20 +7,24 @@ export const CartSlice = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
-       state.items.push(action.payload);
-    },
+		    console.log('add item reducer fired!', action.payload);
+            /*  state.push(action.payload);  incorrect */
+        state.items.push(action.payload);  /* Correct way to add an item to the array */
+      },
     removeItem: (state, action) => {
-        state.items = state.items.filter(item => item.name !== action.payload);
-        console.log('Remove item reducer fired!', action.payload); 
+	    	console.log('remove item reducer fired!', action.payload);
+        const name = action.payload; // Assuming you pass the name of the item to remove
+        state.items = state.items.filter(item => item.name !== name);		
     },
     updateQuantity: (state, action) => {
+        console.log('update quantity reducer fired!', action.payload);
         const { name, quantity } = action.payload; // Destructure the product name and new quantity from the action payload
         // Find the item in the cart that matches the given name
         const itemToUpdate = state.items.find(item => item.name === name);
-        if (itemToUpdate) {
-            console.log('Update Quantity reducer fired!', action.payload); 
-           itemToUpdate.quantity = quantity; // If the item is found, update its quantity to the new value
-        }    
+        const existingItem = state.items.find(item => item.name === name);
+        if (existingItem) {
+            existingItem.quantity = quantity; // Update the quantity
+        }
     },
   },
 });
