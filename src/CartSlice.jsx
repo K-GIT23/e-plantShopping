@@ -24,12 +24,11 @@ export const CartSlice = createSlice({
     removeItem: (state, action) => {
 	    console.log('remove item reducer fired!', action.payload);
 		const removeItem = action.payload;
+        state.items = state.items.filter(item => item.name === name);	     
 		//update the counts 
-		state.totalQuantity -= existingItem.quantity;
-        state.totalCost -= existingItem.price * existingItem.quantity;
-		
-        const existingItem = state.items.find((item) => item.id === removeItem);
-        state.items = state.items.filter(item => item.name === name);		
+		if(existingItem) {
+		  state.totalQuantity -= existingItem.quantity;
+          state.totalCost -= existingItem.cost * existingItem.quantity;	
     },
     updateQuantity: (state, action) => {
         console.log('update quantity reducer fired!', action.payload);
