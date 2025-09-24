@@ -9,8 +9,7 @@ export const CartSlice = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
-		    console.log('add item reducer fired!', action.payload);
-            /*  state.push(action.payload);  incorrect */
+		    /*  state.push(action.payload);  incorrect */
 			const { name, image, cost } = action.payload;
 			const existingItem = state.items.find(item => item.name === name);
 
@@ -25,7 +24,6 @@ export const CartSlice = createSlice({
              state.totalCost += cost;    //update total cost		 
 	      },  	       
     removeItem: (state, action) => {
-	    console.log('remove item reducer fired!', action.payload);
 		const removeItemName = action.payload;
         const existingItem = state.items.find(item => item.name === removeItemName);
         		
@@ -42,7 +40,6 @@ export const CartSlice = createSlice({
         }
     },
     updateQuantity: (state, action) => {
-        console.log('update quantity reducer fired!', action.payload);
         const { name, quantity } = action.payload; // Destructure the product name and new quantity from the action payload
         // Find the item in the cart that matches the given name
         const existingItem = state.items.find(item => item.name === name);
